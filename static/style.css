@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+
+    --neutral-main-bg: hsl(217, 54%, 11%);
+    --neutral-card-bg: hsl(216, 50%, 16%);
+    --neutral-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10px;
+    background-color: var(--neutral-main-bg);
+
+}
+
+.card-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background-color: var(--neutral-card-bg);
+    border-radius: 1rem;
+    max-width: 300px;
+    gap: 0.8rem;
+}
+
+figure {
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.card-container .img-coin img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-container .img-coin::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 98.5%;
+    background-color: var(--primary-cyan);
+    opacity: 0;
+    border-radius: 0.5rem;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.card-container .img-coin:hover::before {
+    content: '';
+    opacity: 0.6;
+}
+
+.card-container .img-coin::after {
+    content: '';
+    background-image: url('/images/icon-view.svg');
+    position: absolute;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 98.5%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.card-container .img-coin:hover::after {
+    opacity: 1;
+}
+
+.title-desc-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.title-desc-element h3 {
+    color: var(--white);
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+.title-desc-element h3:hover {
+    color: var(--primary-cyan);
+}
+
+.title-desc-element p {
+    color: var(--primary-soft-blue);
+    font-weight: 300;
+}
+
+.title-desc-element .cost-time-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+
+.title-desc-element .cost-time-element .coin-text {
+    color: var(--primary-cyan);
+    display: flex;
+    gap: 5px;
+    width: max-content;
+    font-size: 14px;
+}
+
+.title-desc-element .cost-time-element .time-text {
+    color: var(--primary-soft-blue);
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.card-container hr {
+    width: 100%;
+    border: solid 1px var(--neutral-line);
+}
+
+.card-container .avatar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.card-container .avatar-container img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.card-container .avatar-container p {
+    color: var(--primary-soft-blue);
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.card-container .avatar-container span {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+.card-container .avatar-container span:hover {
+    color: var(--primary-cyan);
+}
+
+.attribution{
+    color: white;
+}
