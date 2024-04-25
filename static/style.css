@@ -66,7 +66,7 @@ figure {
 
 .card-container .img-coin::after {
     content: '';
-    background-image: url('/images/icon-view.svg');
+    background-image: url('../images/icon-view.svg');
     position: absolute;
     transform: translateX(-100%);
     width: 100%;
